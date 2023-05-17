@@ -1,0 +1,14 @@
+export const activeDashboard = "/images/pie-chartA.png";
+export const Dashboard = "/images/pie-chartB.png";
+export const balance = "/images/walletB.png";
+export const logo = "/images/logo.png";
+export const lines = "/images/lines.png";
+export const transaction = "/images/transaction.png";
+export const activetransaction = "/images/transactionsA.png";
+export const chartB = "/images/chartB.png";
+export const radar = "/images/radar.png";
+export const swapB = "/images/swapB.png";
+export const shoppingCart = "/images/shoppingCart.png";
+export const paymentLink = "/images/payment-link.png";
+export const wire = "/images/exchange.png";
+// export const logo = "/images/logo.png";
