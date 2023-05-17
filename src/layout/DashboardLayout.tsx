@@ -4,7 +4,6 @@ import { logo } from "@/constant";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { useSelector } from "react-redux";
 import tw from "twin.macro";
 
 const Container = tw.div`flex items-start w-screen h-screen bg-white`;
