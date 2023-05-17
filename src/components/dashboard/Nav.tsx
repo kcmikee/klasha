@@ -44,7 +44,7 @@ function NavBar({
           <div
             className={`${
               show ? "block" : "hidden"
-            } absolute py-5 gap-y-5 bg-white w-[320px] md:w-[420px] mt-2 rounded-xl border-[1px]`}
+            } absolute z-40 py-5 gap-y-5 bg-white w-[320px] md:w-[420px] mt-2 rounded-xl border-[1px]`}
           >
             {sidenav.map((sideNav1: SideNav, index: number) => (
               <div className="flex flex-col gap-y-5">
