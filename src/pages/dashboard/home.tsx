@@ -273,7 +273,7 @@ export default function Home() {
             <Line
               options={options2}
               data={data3}
-              style={{ width: 850, height: 284 }}
+              style={{ width: "100%", height: 284 }}
             />
           </div>
         </div>
