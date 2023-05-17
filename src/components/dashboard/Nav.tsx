@@ -6,6 +6,7 @@ import { sidenav } from "@/constant/navigation";
 import { SideNav } from "@/types";
 import { BiArrowBack } from "react-icons/bi";
 import { useRouter } from "next/navigation";
+import { Dropdown } from "flowbite-react";
 
 import {
   HiOutlineChevronDown,
@@ -34,10 +35,32 @@ function NavBar({
 }) {
   const router = useRouter();
   const router2 = useRouter2();
+  const [show, setShow] = React.useState(false);
   return (
     <div className="relative flex items-center justify-between">
-      <div className="flex items-center gap-3 lg:hidden">
-        <HiOutlineMenu size={24} />
+      <div className="relative flex items-center gap-3 lg:hidden">
+        <div onClick={() => setShow(!show)} className="relative">
+          <HiOutlineMenu size={24} onClick={() => setShow(!show)} />
+          <div
+            className={`${
+              show ? "block" : "hidden"
+            } absolute py-5 gap-y-5 bg-white w-[320px] md:w-[420px] mt-2 rounded-xl border-[1px]`}
+          >
+            {sidenav.map((sideNav1: SideNav, index: number) => (
+              <div className="flex flex-col gap-y-5">
+                {/* <h3>{sideNav1.title}</h3> */}
+                {sideNav1.links.map((level2, index) => (
+                  <Link href={level2.route}>
+                    <Dropdown.Item key={index} className="mt-4 text-black">
+                      {level2.name}
+                    </Dropdown.Item>
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <Image src={logo} alt="folio" width={84} height={26} />
       </div>
       {goBack ? (
