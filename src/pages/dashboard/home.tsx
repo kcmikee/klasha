@@ -29,8 +29,10 @@ ChartJS.register(
   Legend
 );
 
-const Box = tw.div`border-[1px] border-black h-[240px] w-[256px] rounded-lg p-6 flex flex-col justify-between`;
-const OverFlow = tw(Row)`overflow-x-auto flex-nowrap gap-x-10 `;
+const Box = tw.div`border-[1px] border-black w-[43%] h-[240px] md:h-[240px] md:w-[256px] rounded-lg p-3 md:p-6 flex flex-col justify-between`;
+const OverFlow = tw(
+  Row
+)`overflow-x-auto flex-wrap md:justify-center lg:justify-start lg:flex-nowrap gap-x-10 `;
 const Block = tw.span`block`;
 
 export default function Home() {
@@ -180,10 +182,10 @@ export default function Home() {
 
   return (
     <DashboardLayout>
-      <h2 className="mt-[108px] text-xl">Sales overview</h2>
+      <h2 className="mt-[50px] lg:mt-[108px] text-xl">Sales overview</h2>
       <OverFlow className="mt-6 no-scrollbar">
         <Box>
-          <div className="w-[208px]">
+          <div className="md:w-[208px]">
             <p className="text-sm font-normal">Today's sales</p>
             <p className="text-xl font-medium">₦1,652.50</p>
           </div>
@@ -237,9 +239,9 @@ export default function Home() {
           </div>
         </Box>
       </OverFlow>
-      <div className="flex w-full gap-5 mt-8 h-[355px]">
-        <div className="w-9/12">
-          <Row className="flex items-center w-full mt-3">
+      <div className="flex flex-col lg:flex-row w-full gap-5 mt-20 md:mt-8 lg:h-[355px] mb-20 ">
+        <div className="w-full lg:w-9/12">
+          <Row className="flex flex-wrap items-center w-full mt-3">
             <h3 className="text-xl">Sale</h3>
             <Row className="">
               <h3 className="text-[#EF2C5A] font-semibold text-sm cursor-pointer">
@@ -260,16 +262,16 @@ export default function Home() {
               className="customSelectXyz bg-white border border-gray-700 text-black 
               text-sm rounded-lg focus:ring-blue-500 
               focus:border-blue-500 block p-2.5 
-             w-[283px]"
+             w-[45%] md:w-[283px]"
             >
               <option value="">Email</option>
             </select>
-            <button className="flex items-center gap-2 border-[1px] border-black rounded-lg h-10 w-[148px] justify-center">
+            <button className="flex items-center gap-2 border-[1px] border-black rounded-lg h-10  w-[45%] md:w-[148px] justify-center">
               <HiOutlineArrowDown size={15} />
               <p className="text-xs font-bold">Download report</p>
             </button>
           </Row>
-          <div className="h-[284px] w-full border-[1px] border-black mt-2 rounded-xl p-3">
+          <div className="md:h-[284px] w-full border-[1px] border-black mt-2 rounded-xl p-3">
             <Line
               options={options2}
               data={data3}
@@ -277,8 +279,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="w-3/12 h-2 mt-3">
-          <div className="pt-14">
+        {/* red */}
+        <div className="w-3/12 h-2 mt-3 ">
+          <div className="lg:pt-14">
             <div className="h-[274px] w-[274px] bg-[#EF2C5A] rounded-xl p-6 relative overflow-hidden">
               <p className="text-lg font-medium text-white">
                 KlashaWire - <Block>send money to businesses</Block>{" "}
@@ -292,6 +295,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="h-52 lg:hidden" />
     </DashboardLayout>
   );
 }

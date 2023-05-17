@@ -92,9 +92,11 @@ function Transactions() {
   ];
   return (
     <DashboardLayout>
-      <h2 className="mt-[108px] font-medium text-xl">Transaction history</h2>
-      <Row className="justify-between mt-7">
-        <div className="w-[280px] h-[54px] border-[1px] border-gray-200 rounded-xl overflow-hidden px-4 flex items-center ">
+      <h2 className="mt-[50px] lg:mt-[108px] font-medium text-xl">
+        Transaction history
+      </h2>
+      <Row className="flex-col justify-between md:flex-row mt-7">
+        <div className="w-full md:w-[280px] h-[54px] border-[1px] border-gray-200 rounded-xl overflow-hidden px-4 flex items-center ">
           <input
             type="text"
             className="h-full outline-none w-[90%]"
@@ -102,28 +104,28 @@ function Transactions() {
           />
           <CiSearch size={20} />
         </div>
-        <Row>
-          <button className="w-[94px] h-[40px] border-[1px] border-black rounded-lg flex justify-center items-center gap-2 ">
+        <Row className="w-full">
+          <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg flex justify-center items-center gap-2 ">
             Filter <BsFilter />
           </button>
-          <button className="w-[94px] h-[40px] border-[1px] border-black rounded-lg ">
+          <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg ">
             Export
           </button>
         </Row>
       </Row>
       <div className="mt-8 border-b-[1px] border-gray-200 pb-14 ">
         <DataTable columns={columns} data={data} />
-        <div className="flex items-center justify-around  w-6/12 h-[48px] border-[1px] border-gray-200 ml-auto mt-4 rounded-lg overflow-hidden">
+        <div className="flex items-center justify-around w-full md:w-8/12 lg:w-6/12 h-[48px] border-[1px] border-gray-200 ml-auto mt-4 rounded-lg overflow-hidden">
           {["1", 1, 2, 3, "...", 8, 9, 10, "10"].map((pagi, index) => {
             if (index === 0) {
               return (
-                <div className="flex items-center justify-center h-full text-gray-300 cursor-poin5e0">
+                <div className="flex items-center justify-center h-full text-gray-300 cursor-pointer">
                   <HiOutlineChevronLeft size={20} />
                 </div>
               );
             } else if (index === 8) {
               return (
-                <div className="flex items-center justify-center h-full text-gray-300 cursor-poin5e0">
+                <div className="flex items-center justify-center h-full text-gray-300 cursor-pointer">
                   <HiOutlineChevronRight size={20} />
                 </div>
               );
@@ -132,9 +134,9 @@ function Transactions() {
                 <div
                   className={`${
                     index === 1
-                      ? "bg-[#F0F0F0] h-[25px] px-[9px] rounded-full"
-                      : ""
-                  } flex items-center justify-center h-full cursor-pointer text-gray-500`}
+                      ? "bg-[#F0F0F0] h-[35px] w-[35px] px-[9px] rounded-full"
+                      : " h-full"
+                  } flex items-center justify-center cursor-pointer text-gray-500`}
                 >
                   {pagi}
                 </div>
