@@ -92,6 +92,11 @@ export default function Home() {
 
   const options2 = {
     responsive: true,
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
     plugins: {
       legend: {
         display: false,
@@ -268,7 +273,7 @@ export default function Home() {
             <Line
               options={options2}
               data={data3}
-              style={{ height: "100%", width: "100%" }}
+              style={{ width: 850, height: 284 }}
             />
           </div>
         </div>

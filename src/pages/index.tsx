@@ -10,7 +10,7 @@ const OverFlow = tw(Row)`overflow-x-auto flex-nowrap gap-x-10 `;
 export default function Home() {
   const router = useRouter();
   React.useEffect(() => {
-    router.push("/dashboard");
+    router.push("/dashboard/home");
   }, [router]);
 
   return <></>;
