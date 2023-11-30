@@ -1,7 +1,7 @@
 import { Row } from "@/components/common/SideBar";
 import DashboardLayout from "@/layout/DashboardLayout";
 import React from "react";
-import { BsFilter } from "react-icons/bs";
+import { IoFilter } from "react-icons/io5";
 import { CiSearch } from "react-icons/ci";
 import DataTable from "react-data-table-component";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
@@ -49,8 +49,8 @@ function Transactions() {
       source: "GTB",
       name: "Esenwa Kachukwu Michael",
       email: "tugrp@example.com",
-      amount: "100",
-      date: "2021-10-10",
+      amount: "$230.0",
+      date: "2021.10.10",
       status: "Pending",
     },
     {
@@ -58,8 +58,8 @@ function Transactions() {
       source: "GTB",
       name: "Esenwa Kachukwu Michael",
       email: "tugrp@example.com",
-      amount: "100",
-      date: "2021-10-10",
+      amount: "$230.0",
+      date: "2021.10.10",
       status: "Pending",
     },
     {
@@ -67,8 +67,8 @@ function Transactions() {
       source: "GTB",
       name: "Esenwa Kachukwu Michael",
       email: "tugrp@example.com",
-      amount: "100",
-      date: "2021-10-10",
+      amount: "$230.0",
+      date: "2021.10.10",
       status: "Pending",
     },
     {
@@ -76,8 +76,8 @@ function Transactions() {
       source: "GTB",
       name: "Esenwa Kachukwu Michael",
       email: "tugrp@example.com",
-      amount: "100",
-      date: "2021-10-10",
+      amount: "$230.0",
+      date: "2021.10.10",
       status: "Pending",
     },
     {
@@ -85,63 +85,67 @@ function Transactions() {
       source: "GTB",
       name: "Esenwa Kachukwu Michael",
       email: "tugrp@example.com",
-      amount: "100",
-      date: "2021-10-10",
+      amount: "$230.0",
+      date: "2021.10.10",
       status: "Pending",
     },
   ];
   return (
     <DashboardLayout>
-      <h2 className="mt-[50px] lg:mt-[108px] font-medium text-xl">
-        Transaction history
-      </h2>
-      <Row className="flex-col justify-between md:flex-row mt-7">
-        <div className="w-full md:w-[280px] h-[54px] border-[1px] border-gray-200 rounded-xl overflow-hidden px-4 flex items-center ">
-          <input
-            type="text"
-            className="h-full outline-none w-[90%]"
-            placeholder="Search"
-          />
-          <CiSearch size={20} />
-        </div>
-        <Row className="w-full">
-          <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg flex justify-center items-center gap-2 ">
-            Filter <BsFilter />
-          </button>
-          <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg ">
-            Export
-          </button>
-        </Row>
-      </Row>
-      <div className="mt-8 border-b-[1px] border-gray-200 pb-14 ">
-        <DataTable columns={columns} data={data} />
-        <div className="flex items-center justify-around w-full md:w-8/12 lg:w-6/12 h-[48px] border-[1px] border-gray-200 ml-auto mt-4 rounded-lg overflow-hidden">
-          {["1", 1, 2, 3, "...", 8, 9, 10, "10"].map((pagi, index) => {
-            if (index === 0) {
-              return (
-                <div className="flex items-center justify-center h-full text-gray-300 cursor-pointer">
-                  <HiOutlineChevronLeft size={20} />
-                </div>
-              );
-            } else if (index === 8) {
-              return (
-                <div className="flex items-center justify-center h-full text-gray-300 cursor-pointer">
-                  <HiOutlineChevronRight size={20} />
-                </div>
-              );
-            } else
-              return (
-                <div
-                  className={`${
-                    index === 1
-                      ? "bg-[#F0F0F0] h-[35px] w-[35px] px-[9px] rounded-full"
-                      : " h-full"
-                  } flex items-center justify-center cursor-pointer text-gray-500`}
-                >
-                  {pagi}
-                </div>
-              );
-          })}
+      <div className="px-4 md:pl-8">
+        <div className="mt-[50px] lg:mt-[108px] border border-gray-300 rounded-xl">
+          <div className="p-6 border-b">
+            <h2 className="text-lg font-medium">Transaction history</h2>
+          </div>
+          <Row className="flex-col justify-between px-6 py-2 border-b border-gray-300 md:flex-row">
+            <div className="w-full md:w-[280px] h-[54px] border-[1px] border-gray-300 rounded-xl overflow-hidden px-4 flex items-center ">
+              <input
+                type="text"
+                className="h-full outline-none border-none w-[90%]"
+                placeholder="Search"
+              />
+              <CiSearch size={20} />
+            </div>
+            <Row className="">
+              <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg flex justify-center items-center gap-2 ">
+                Filter <IoFilter />
+              </button>
+              <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg ">
+                Export
+              </button>
+            </Row>
+          </Row>
+          <div className="mt-8 border-b-[1px] border-gray-300 pb-14 px-6 ">
+            <DataTable columns={columns} data={data} />
+            <div className="flex items-center justify-around w-full md:w-8/12 lg:w-5/12 h-[48px] border-[1px] border-gray-300 ml-auto mt-4 rounded-lg overflow-hidden">
+              {["1", 1, 2, 3, "...", 8, 9, 10, "10"].map((pagi, index) => {
+                if (index === 0) {
+                  return (
+                    <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
+                      <HiOutlineChevronLeft size={20} />
+                    </div>
+                  );
+                } else if (index === 8) {
+                  return (
+                    <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
+                      <HiOutlineChevronRight size={20} />
+                    </div>
+                  );
+                } else
+                  return (
+                    <div
+                      className={`${
+                        index === 1
+                          ? "bg-[#F0F0F0] h-[35px] w-[35px] px-[9px] rounded-full"
+                          : " h-full text-gray-500"
+                      } flex items-center justify-center cursor-pointer font-bold`}
+                    >
+                      {pagi}
+                    </div>
+                  );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </DashboardLayout>

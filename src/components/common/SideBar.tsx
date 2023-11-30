@@ -17,7 +17,7 @@ function SideBar() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="">
       {sidenav.map((sideNav1: SideNav, index: number) => (
         <div key={index}>
           <Header
@@ -29,28 +29,23 @@ function SideBar() {
             {sideNav1.links.map((level2, index2: number) => (
               <Link href={level2.route} key={index2}>
                 <Row
-                  className={`w-[90%] h-10 justify-between items-center  rounded-md 
+                  className={`w-[90%] h-10 justify-between items-center rounded-md 
                 group/item`}
                 >
                   <Row className="items-center">
-                    <div className="h-[16px] xl:h-[21px] w-[16px] xl:w-[21px] stroke-red-500">
-                      {router.pathname.includes(level2.route) ? (
-                        <Image
-                          priority
-                          src={level2.active}
-                          alt={level2.name}
-                          width={21}
-                          height={21}
-                        />
-                      ) : (
-                        <Image
-                          priority
-                          src={level2.image}
-                          alt={level2.name}
-                          width={21}
-                          height={21}
-                        />
-                      )}
+                    <div className="h-[16px] w-[16px] xl:w-[21px]">
+                      <Image
+                        priority
+                        src={level2.active}
+                        alt={level2.name}
+                        width={21}
+                        height={21}
+                        className={`${
+                          router.pathname.includes(level2.route)
+                            ? ""
+                            : "grayscale"
+                        }`}
+                      />
                     </div>
                     <h3
                       className={` ml-1 text-sm xl:text-base ${
@@ -66,18 +61,18 @@ function SideBar() {
               </Link>
             ))}
           </div>
-          <div className="hidden xl:absolute bottom-6">
-            <div className="flex items-center gap-2 w-[120px] bg-[#ef2c5a] h-10 rounded-full justify-center">
-              <BsQuestionCircle color="white" />
-              <p className="text-sm text-white">Support</p>
-            </div>
-            <Hide>
-              <HiChevronLeft size={20} />
-              <p className="text-sm text-black">Hide panel</p>
-            </Hide>
-          </div>
         </div>
       ))}
+      <div className="hidden bottom-6 lg:block lg:absolute">
+        <div className="flex items-center gap-2 w-[120px] bg-[#ef2c5a] h-10 rounded-full justify-center">
+          <BsQuestionCircle color="white" />
+          <p className="text-sm text-white">Support</p>
+        </div>
+        <Hide>
+          <HiChevronLeft size={20} />
+          <p className="text-sm text-black">Hide panel</p>
+        </Hide>
+      </div>
     </div>
   );
 }

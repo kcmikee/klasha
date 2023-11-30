@@ -11,4 +11,5 @@ export const swapB = "/images/swapB.png";
 export const shoppingCart = "/images/shoppingCart.png";
 export const paymentLink = "/images/payment-link.png";
 export const wire = "/images/exchange.png";
+export const exchange = "/images/exchangeRate.png";
 // export const logo = "/images/logo.png";

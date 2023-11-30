@@ -13,7 +13,7 @@ import tw from "twin.macro";
 const Container = tw.div`flex items-start w-screen h-screen bg-white`;
 const LogoContainer = tw.div`w-[84px] h-[26px]`;
 const SideContainer = tw.div`w-[25%] xl:w-[19%] h-full pt-8 pl-4 xl:pl-12 relative hidden lg:block bg-[#FFFBF7]`;
-const ContentContent = tw.div`w-full lg:w-[75%] xl:w-[80%] h-full pt-4 ml-4 mr-4 md:ml-8 md:mr-4 overflow-scroll lg:pb-20 `;
+const ContentContent = tw.div`w-full lg:w-[76%] xl:w-[80.9%] h-full pt-4  overflow-scroll lg:pb-20 `; //ml-4 mr-4 md:ml-8 md:mr-4
 const MobileSideBar = tw.div`absolute top-0 left-0 z-30 w-full h-full p-8 bg-black`;
 
 function DashboardLayout({

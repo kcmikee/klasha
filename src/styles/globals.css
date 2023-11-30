@@ -98,5 +98,16 @@ body {
 
 .jlPZUL {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
+  color: "#5F5F5F";
+}
+.hOjrSE {
+  padding: 23px 0px;
+}
+.hOjrSE:nth-child(even) {
+  background: #f7f7f7;
+}
+
+.ghLWkf {
+  font-size: 14px;
 }

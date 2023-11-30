@@ -37,7 +37,7 @@ function NavBar({
   const router2 = useRouter2();
   const [show, setShow] = React.useState(false);
   return (
-    <div className="relative flex items-center justify-between">
+    <div className="relative flex items-center justify-between w-full px-4 pb-4 border-b border-b-[#EDEDED] md:pl-8">
       <div className="relative flex items-center gap-3 lg:hidden">
         <div onClick={() => setShow(!show)} className="relative">
           <HiOutlineMenu size={24} onClick={() => setShow(!show)} />
