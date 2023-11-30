@@ -115,35 +115,37 @@ function Transactions() {
               </button>
             </Row>
           </Row>
-          <div className="mt-8 border-b-[1px] border-gray-300 pb-14 px-6 ">
+          <div className="px-6 pb-2 mt-8">
             <DataTable columns={columns} data={data} />
-            <div className="flex items-center justify-around w-full md:w-8/12 lg:w-5/12 h-[48px] border-[1px] border-gray-300 ml-auto mt-4 rounded-lg overflow-hidden">
-              {["1", 1, 2, 3, "...", 8, 9, 10, "10"].map((pagi, index) => {
-                if (index === 0) {
-                  return (
-                    <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
-                      <HiOutlineChevronLeft size={20} />
-                    </div>
-                  );
-                } else if (index === 8) {
-                  return (
-                    <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
-                      <HiOutlineChevronRight size={20} />
-                    </div>
-                  );
-                } else
-                  return (
-                    <div
-                      className={`${
-                        index === 1
-                          ? "bg-[#F0F0F0] h-[35px] w-[35px] px-[9px] rounded-full"
-                          : " h-full text-gray-500"
-                      } flex items-center justify-center cursor-pointer font-bold`}
-                    >
-                      {pagi}
-                    </div>
-                  );
-              })}
+            <div className="py-4 border-t">
+              <div className="flex items-center justify-around w-full md:w-8/12 lg:w-4/12 h-[48px] border border-gray-300 ml-auto mt-4 rounded-lg overflow-hidden">
+                {["1", 1, 2, 3, "...", 8, 9, 10, "10"].map((pagi, index) => {
+                  if (index === 0) {
+                    return (
+                      <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
+                        <HiOutlineChevronLeft size={20} />
+                      </div>
+                    );
+                  } else if (index === 8) {
+                    return (
+                      <div className="flex items-center justify-center h-full text-gray-400 cursor-pointer">
+                        <HiOutlineChevronRight size={20} />
+                      </div>
+                    );
+                  } else
+                    return (
+                      <div
+                        className={`${
+                          index === 1
+                            ? "bg-[#F0F0F0] h-[35px] w-[35px] px-[9px] rounded-full"
+                            : " h-full text-gray-500"
+                        } flex items-center justify-center cursor-pointer font-bold`}
+                      >
+                        {pagi}
+                      </div>
+                    );
+                })}
+              </div>
             </div>
           </div>
         </div>
