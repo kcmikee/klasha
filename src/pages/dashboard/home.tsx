@@ -254,38 +254,38 @@ export default function Home() {
         </OverFlow>
         <div className="flex flex-col xl:flex-row w-full gap-5 mt-20 md:mt-8 lg:h-[355px] mb-20 ">
           <div className="w-full xl:w-9/12">
-            <SaleRow className="flex flex-wrap items-center w-full mt-3">
-              <h3 className="pr-4 text-xl border-r border-gray-400">Sale</h3>
-              <Row className="xl:space-x-6 xl:mr-4">
-                <h3 className="text-[#EF2C5A] font-semibold text-sm cursor-pointer">
-                  7 days
-                </h3>
+            <div className="grid items-center w-full grid-cols-4 gap-4 mt-3 xl:grid-cols-5">
+              <div className="flex items-center col-span-4 space-x-6 md:col-span-2">
+                <h3 className="pr-4 text-xl border-r border-gray-400">Sale</h3>
+                <Row className="xl:space-x-4">
+                  <h3 className="text-[#EF2C5A] font-semibold text-sm cursor-pointer">
+                    7 days
+                  </h3>
 
-                <h3 className="text-sm font-semibold cursor-pointer">
-                  30 days
-                </h3>
-              </Row>
-              <select
-                className="customSelectXyz bg-white border border-gray-700 text-black 
+                  <h3 className="text-sm font-semibold cursor-pointer">
+                    30 days
+                  </h3>
+                </Row>
+                <select
+                  className="customSelectXyz bg-white border border-gray-700 text-black 
               text-sm rounded-lg focus:ring-blue-500 
               focus:border-blue-500 block p-2.5 
-             w-[91px]"
-              >
-                <option value="">USD</option>
-              </select>
+            "
+                >
+                  <option value="">USD</option>
+                </select>
+              </div>
               <select
                 className="customSelectXyz bg-white border border-gray-700 text-black 
-              text-sm rounded-lg focus:ring-blue-500 
-              focus:border-blue-500 block p-2.5 
-             w-[35%] max-w-[35%] md:max-w-[330px] "
+              text-sm rounded-lg outline-none block p-2.5 col-span-2 md:col-span-1 lg:col-span-2"
               >
                 <option value="">Email</option>
               </select>
-              <button className="flex items-center gap-2 border-[1px] border-black rounded-lg h-10  w-[45%] md:w-[148px] justify-center">
+              <button className="flex items-center gap-2 border-[1px] border-black rounded-lg h-10 col-span-2 md:col-span-1 justify-center">
                 <HiOutlineArrowDown size={15} />
                 <p className="text-xs font-bold">Download report</p>
               </button>
-            </SaleRow>
+            </div>
             <div className="md:h-[284px] w-full border-[1px] border-black mt-2 rounded-xl p-5">
               <Line
                 options={options2}
