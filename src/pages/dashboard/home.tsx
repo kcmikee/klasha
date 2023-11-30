@@ -157,8 +157,7 @@ export default function Home() {
         data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
         borderColor: "#EF2C5A",
         borderWidth: 1,
-        backgroundColor:
-          "linear-gradient(0deg, #EF2C5A -435.62%, rgba(239, 44, 90, 0) 93.15%)",
+        backgroundColor: "rgba(239, 44, 90, 0.13)",
       },
     ],
   };
