@@ -252,11 +252,11 @@ export default function Home() {
             </div>
           </Box>
         </OverFlow>
-        <div className="flex flex-col lg:flex-row w-full gap-5 mt-20 md:mt-8 lg:h-[355px] mb-20 ">
-          <div className="w-full lg:w-9/12">
+        <div className="flex flex-col xl:flex-row w-full gap-5 mt-20 md:mt-8 lg:h-[355px] mb-20 ">
+          <div className="w-full xl:w-9/12">
             <SaleRow className="flex flex-wrap items-center w-full mt-3">
               <h3 className="pr-4 text-xl border-r border-gray-400">Sale</h3>
-              <Row className="mr-4 space-x-6">
+              <Row className="xl:space-x-6 xl:mr-4">
                 <h3 className="text-[#EF2C5A] font-semibold text-sm cursor-pointer">
                   7 days
                 </h3>
@@ -277,7 +277,7 @@ export default function Home() {
                 className="customSelectXyz bg-white border border-gray-700 text-black 
               text-sm rounded-lg focus:ring-blue-500 
               focus:border-blue-500 block p-2.5 
-             w-[45%] md:w-[330px]"
+             w-[35%] max-w-[35%] md:max-w-[330px] "
               >
                 <option value="">Email</option>
               </select>
@@ -296,7 +296,7 @@ export default function Home() {
           </div>
           {/* red */}
           <div className="w-3/12 h-2 mt-3 ">
-            <div className="lg:pt-14">
+            <div className="xl:pt-14">
               <div className="h-[274px] w-[274px] bg-[#EF2C5A] rounded-xl p-6 relative overflow-hidden">
                 <p className="text-lg font-medium text-white">
                   KlashaWire - <Block>send money to businesses</Block>{" "}
