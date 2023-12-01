@@ -147,6 +147,9 @@ body {
 
 .rdt_TableHead {
   font-family: "GeneralSans";
+  font-size: 16px;
+  font-weight: 600;
+  color: "#5F5F5F";
 }
 .rdt_TableCell {
   padding: 23px 0px;
