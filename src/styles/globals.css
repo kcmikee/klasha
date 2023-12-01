@@ -139,15 +139,15 @@ body {
   background-size: 0.65rem auto;
 }
 
-.jlPZUL {
+/* .jlPZUL {
   font-size: 14px;
   font-weight: 600;
   color: "#5F5F5F";
-}
+} */
 
-.rdt_TableHeader {
+.rdt_TableHeadRow {
   font-family: "GeneralSans";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: "#5F5F5F";
 }
