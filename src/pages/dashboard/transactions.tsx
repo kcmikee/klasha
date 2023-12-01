@@ -106,7 +106,7 @@ function Transactions() {
               />
               <CiSearch size={20} />
             </div>
-            <Row className="">
+            <Row className="w-full md:w-auto">
               <button className="w-[45%] md:w-[94px] h-[40px] border-[1px] border-black rounded-lg flex justify-center items-center gap-2 ">
                 Filter <IoFilter />
               </button>

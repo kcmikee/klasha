@@ -101,13 +101,10 @@ body {
   font-weight: 600;
   color: "#5F5F5F";
 }
-.hOjrSE {
+.rdt_TableCell {
   padding: 23px 0px;
-}
-.hOjrSE:nth-child(even) {
-  background: #f7f7f7;
-}
-
-.ghLWkf {
   font-size: 14px;
+}
+.rdt_TableRow:nth-child(even) {
+  background: #f7f7f7;
 }
