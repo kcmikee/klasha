@@ -1,14 +1,19 @@
 import SideBar from "@/components/common/SideBar";
 import NavBar from "@/components/dashboard/Nav";
 import { logo } from "@/constant";
-
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useRouter as useRouter2 } from "next/router";
 import React from "react";
-
 import tw from "twin.macro";
+
+import { Inter } from "next/font/google";
+
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 const Container = tw.div`flex items-start w-screen h-screen bg-white`;
 const LogoContainer = tw.div`w-[84px] h-[26px]`;
@@ -26,7 +31,7 @@ function DashboardLayout({
   const router = useRouter();
 
   return (
-    <Container>
+    <Container className={`${inter.variable}`}>
       <SideContainer>
         <LogoContainer>
           <Image src={logo} alt="folio" width={84} height={26} />

@@ -15,7 +15,7 @@ import {
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
 import { HiOutlineArrowDown } from "react-icons/hi";
-import { lines, logo } from "@/constant";
+import { lines } from "@/constant";
 import Image from "next/image";
 
 ChartJS.register(
@@ -30,10 +30,10 @@ ChartJS.register(
 );
 
 const SaleRow = tw(Row)`gap-2.5`;
-const Box = tw.div`border-[1px] border-black w-[43%] h-[240px] md:h-[240px] md:w-[256px] rounded-lg p-3 md:p-6 flex flex-col justify-between`;
+const Box = tw.div`border-[1px] border-black w-[43%] h-[240px] md:h-[240px] md:min-w-[256px] rounded-lg p-3 md:p-6 flex flex-col justify-between`;
 const OverFlow = tw(
   Row
-)`overflow-x-auto flex-wrap md:justify-center lg:justify-start lg:flex-nowrap gap-x-7 `;
+)`overflow-x-auto lg:w-[96%] flex-wrap md:justify-center lg:justify-between lg:flex-nowrap gap-x-7 `;
 const Block = tw.span`block`;
 
 export default function Home() {
@@ -100,6 +100,7 @@ export default function Home() {
 
   const options2 = {
     responsive: true,
+    maintainAspectRatio: true,
     elements: {
       point: {
         radius: 0,
@@ -256,7 +257,7 @@ export default function Home() {
             <div className="grid items-center w-full grid-cols-4 gap-4 mt-3 xl:grid-cols-5">
               <div className="flex items-center col-span-4 space-x-6 md:col-span-2">
                 <h3 className="pr-4 text-xl border-r border-gray-400">Sale</h3>
-                <Row className="xl:space-x-4">
+                <Row className="xl:space-x-1">
                   <h3 className="text-[#EF2C5A] font-semibold text-sm cursor-pointer">
                     7 days
                   </h3>
@@ -289,16 +290,16 @@ export default function Home() {
               <Line
                 options={options2}
                 data={data3}
-                style={{ width: "100%", height: 284, minWidth: "100%" }}
+                style={{ minWidth: "100%", height: "auto" }}
               />
             </div>
           </div>
           {/* red */}
           <div className="w-3/12 h-2 mt-3 ">
             <div className="xl:pt-14">
-              <div className="h-[274px] w-[274px] bg-[#EF2C5A] rounded-xl p-6 relative overflow-hidden">
+              <div className="h-[277px] w-[274px] bg-[#EF2C5A] rounded-xl p-6 relative overflow-hidden">
                 <p className="text-lg font-medium text-white">
-                  KlashaWire - <Block>send money to businesses</Block>{" "}
+                  KlashaWire - send<Block>money to businesses</Block>{" "}
                   <Block>globally from Africa</Block>
                 </p>
                 <button className="bg-black h-12 w-[130px] absolute bottom-5 z-10 rounded-xl cursor-pointer text-white ">
